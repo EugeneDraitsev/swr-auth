@@ -1,10 +1,10 @@
-import { tokens } from '@/app/api/auth/route'
+import { TOKENS } from '@/app/api/server.constants'
 
 export async function GET(request: Request) {
   const headers = request.headers
   const authorization = headers.get('Authorization')?.replace('Bearer ', '')
 
-  if (authorization !== String(tokens.accessToken)) {
+  if (authorization !== String(TOKENS.accessToken)) {
     return new Response('Unauthorized', { status: 401 })
   }
 
