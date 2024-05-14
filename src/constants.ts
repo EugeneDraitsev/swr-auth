@@ -1,0 +1,5 @@
+export const SWR_ACCESS_TOKEN = '/access-token'
+export const SWR_ME = '/api/me'
+export const SWR_SPACE = '/api/space'
+export const SWR_STUDENTS = '/api/students'
+export const SWR_SESSION = '/session'
